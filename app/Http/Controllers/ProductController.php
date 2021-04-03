@@ -25,4 +25,11 @@ class ProductController extends Controller
 
         return view('index', compact('products'));
     }
+
+    public function show($id)
+    {
+        $product = $this->product->findOrFail($id);
+
+        return view('details', compact('product'));
+    }
 }

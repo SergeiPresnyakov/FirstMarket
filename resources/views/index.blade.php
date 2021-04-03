@@ -16,9 +16,10 @@
                 <div class="card-body">
                     <div class="product__image" style="background-image: url('{{$product->image}}')"></div>
                     <div class="card-body">
+                        <p>{{$product->price}} рублей</p>
                     <p class="product__desc">{{ Str::limit($product->description, 100, '...') }}</p>
                     <div class="product__buttons">
-                        <a href="#" class="btn btn-sm btn-outline-primary">Details</a>
+                        <a href="{{ route('show', ['id' => $product->id]) }}" class="btn btn-sm btn-outline-primary">Details</a>
                         <a href="#" class="btn btn-sm btn-primary">Add to cart</a>
                     </div>
                 </div>

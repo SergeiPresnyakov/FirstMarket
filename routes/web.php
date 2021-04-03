@@ -19,4 +19,5 @@ Route::get('/test', function() {
     phpinfo();
 });
 
-Route::get('/', [ProductController::class, 'index']);
+Route::get('/', [ProductController::class, 'index'])->name('index');
+Route::get('/show/{id}', [ProductController::class, 'show'])->name('show');
