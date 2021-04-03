@@ -13,27 +13,27 @@
 </head>
 <body>
     <!-- header -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">     
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-            <a class="navbar-brand" href="#">Store</a>
+            <a class="navbar-brand" href="#">Магазин</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Catalog</a>
+                        <a class="nav-link active" aria-current="page" href="#">Каталог</a>
                     </li>
-                    
+
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Categories
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="#">Мобильные телефоны</a></li>
+                        <li><a class="dropdown-item" href="#">Наушники</a></li>
+                        <li><a class="dropdown-item" href="#">Мониторы</a></li>
                         <li><a class="dropdown-item" href="#">Ноутбуки</a></li>
-                        <li><a class="dropdown-item" href="#">Портативная техника</a></li>
-                        <li><a class="dropdown-item" href="#">Бытовая техника</a></li>
                         </ul>
                     </li>
                     <form class="d-flex">
@@ -41,24 +41,24 @@
                         <button class="btn btn-outline-success" type="submit">Search</button>
                     </form>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Shopping cart <span class="badge rounded-pill bg-info text-dark">3</span></a>
-                    </li>      
+                        <a class="nav-link" href="#">Корзина <span class="badge rounded-pill bg-info text-dark">3</span></a>
+                    </li>
                 </ul>
             </div>
-        </div>    
+        </div>
     </nav>
 
     @yield('content')
 
-    </div>  
-    </div>
+</div>
+</div>
 
     <nav class="navbar fixed-bottom navbar-ligth bg-light">
         <div class="container-fluid">
             <a href="#" class="navbar-brand">Footer</a>
         </div>
     </nav>
-    
+
 
       <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
