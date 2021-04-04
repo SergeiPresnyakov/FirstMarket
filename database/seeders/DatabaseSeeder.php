@@ -9,10 +9,26 @@ use App\Models\Product;
 class DatabaseSeeder extends Seeder
 {
     public $categories = [
-        'мобильные телефоны',
-        'наушники',
-        'ноутбуки',
-        'мониторы'
+        [
+            'name' => 'мобильные телефоны',
+            'description' => 'Как смартфоны, так и простые звонилки',
+            'image' => 'https://www.osp.ru/FileStorage/DOCUMENTS_ILLUSTRATIONS/13225751/original.jpg'
+        ],
+        [
+            'name' => 'наушники',
+            'description' => 'От недорогих затычек, до студийных мониторов',
+            'image' => 'https://reference-audio-analyzer.pro/img/review/char/opcl.jpg'
+        ],
+        [
+            'name' => 'ноутбуки',
+            'description' => 'Ноутбуки на любой вкус и кошелёк',
+            'image' => 'https://static.eldorado.ru/upload/iblock/9a3/9a34086e6369ee3ea01ddb8cf7866fbe.jpg/resize/500x317/'
+        ],
+        [
+            'name' => 'мониторы',
+            'description' => 'Ваше окно в мир интернета, игр, или инструмент для работы',
+            'image' => 'https://images.philips.com/is/image/PhilipsConsumer/271E1SCA_01-IMS-ru_RU?$jpglarge$&wid=960'
+        ]
     ];
 
     public $products = [
@@ -190,7 +206,11 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
         foreach ($this->categories as $category) {
-            Category::create(['name' => $category]);
+            Category::create([
+                'name' => $category['name'],
+                'description' => $category['description'],
+                'image' => $category['image']
+            ]);
         }
 
         foreach($this->products as $product) {

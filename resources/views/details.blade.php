@@ -3,8 +3,8 @@
 @section('content')
     <div class="container wrapper">
         <div class="row">
-            <div class="col-md-8 mt-3">
-                <img src="{{ $product->image }}" class="img-fluid img-thumbnail" alt="{{ $product->brand }} {{ $product->model }}">
+            <div class="col-md-5 mt-3">
+                <div class="product__detail" style="background-image: url('{{$product->image}}')"></div>
                 <div>
                     <h2>{{ $product->brand }} {{ $product->model }}</h2>
                 </div>
