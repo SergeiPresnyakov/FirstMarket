@@ -6,13 +6,14 @@
 @section('content')
 <div class="wrapper">
         <h2 class="text-center">Каталог</h2>
-        <div class="row product_card_head d-flex justify-content-between">
+        <div class="row product_card_head d-flex justify-content-evenly">
 
         @foreach($products as $product)
             <div class="card by-4 mt-3">
                 <div class="card-header">
                     <h5 class="card-title product__brand">{{ $product->brand }}</h5>
                     <h6 class="card-title product__model">{{ $product->model }}</h6>
+                    <p class="card-title product__category_name">{{ $product->category->name }}</p>
                 </div>
                 <div class="card-body">
                     <div class="product__image" style="background-image: url('{{$product->image}}')"></div>

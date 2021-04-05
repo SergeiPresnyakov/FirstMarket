@@ -14,11 +14,19 @@ class ProductController extends Controller
      */
     private $product;
 
+    /**
+     * ProductController constructor
+     *
+     * @param Product $product
+     */
     public function __construct(Product $product)
     {
         $this->product = $product;
     }
 
+    /**
+     * All products catalog
+     */
     public function index()
     {
         $products = $this->product->paginate(8);
@@ -26,6 +34,11 @@ class ProductController extends Controller
         return view('index', compact('products'));
     }
 
+    /**
+     * Detail of the product
+     *
+     * @param int $id Product ID
+     */
     public function show($id)
     {
         $product = $this->product->findOrFail($id);
@@ -33,6 +46,11 @@ class ProductController extends Controller
         return view('details', compact('product'));
     }
 
+    /**
+     * Show products by category
+     *
+     * @param int $id Category ID
+     */
     public function categoryProducts($id)
     {
         $products = $this->product->where('category_id', $id)->paginate(8);

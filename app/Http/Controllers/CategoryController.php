@@ -7,6 +7,9 @@ use App\Models\Category;
 
 class CategoryController extends Controller
 {
+    /**
+     * List of all categories
+     */
     public function index()
     {
         $categories = Category::all();
