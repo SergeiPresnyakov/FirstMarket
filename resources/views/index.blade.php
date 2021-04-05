@@ -2,13 +2,13 @@
 @extends('layouts.layout')
 
 @section('content')
-    <h2 class="text-center mt-3">Catalog</h2>
 
-    <div class="container wrapper">
-        <div class="row">
+<div class="wrapper">
+        <h2 class="text-center">Каталог</h2>
+        <div class="row product_card_head d-flex justify-content-between">
 
         @foreach($products as $product)
-            <div class="card by-4 product">
+            <div class="card by-4 mt-3">
                 <div class="card-header">
                     <h5 class="card-title product__brand">{{ $product->brand }}</h5>
                     <h6 class="card-title product__model">{{ $product->model }}</h6>

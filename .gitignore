@@ -12,3 +12,4 @@ Homestead.yaml
 npm-debug.log
 yarn-error.log
 docker_commands_tips.txt
+resources/views/test.html

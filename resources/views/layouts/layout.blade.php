@@ -13,49 +13,43 @@
 </head>
 <body>
     <!-- header -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <a class="navbar-brand" href="#">Магазин</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Каталог</a>
-                    </li>
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Categories
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Мобильные телефоны</a></li>
-                        <li><a class="dropdown-item" href="#">Наушники</a></li>
-                        <li><a class="dropdown-item" href="#">Мониторы</a></li>
-                        <li><a class="dropdown-item" href="#">Ноутбуки</a></li>
-                        </ul>
-                    </li>
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Корзина <span class="badge rounded-pill bg-info text-dark">3</span></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    @yield('content')
-
-</div>
-</div>
-
-    <nav class="navbar fixed-bottom navbar-ligth bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
-            <a href="#" class="navbar-brand">Footer</a>
+          <a class="navbar-brand" href="#">Магазин</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{{ route('index') }}">Каталог</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ route('categories') }}">Категории</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Корзина  <span class="badge rounded-pill bg-warning text-dark">1</span></a>
+              </li>
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+
+          </div>
+        </div>
+      </nav>
+
+    <div class="container">
+        @yield('content')
+    </div>
+
+</div>
+</div>
+
+    <nav class="navbar fixed-bottom navbar-dark bg-dark">
+        <div class="container justify-content-center">
+            <a href="#" class="navbar-brand">2021</a>
         </div>
     </nav>
 
