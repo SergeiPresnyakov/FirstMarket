@@ -32,4 +32,11 @@ class ProductController extends Controller
 
         return view('details', compact('product'));
     }
+
+    public function categoryProducts($id)
+    {
+        $products = $this->product->where('category_id', $id)->paginate(8);
+
+        return view('index', compact('products'));
+    }
 }
