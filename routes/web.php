@@ -3,6 +3,7 @@
 use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CartController;
 
 
 /*
@@ -23,3 +24,4 @@ Route::get('/test', function() {
 Route::get('/', [ProductController::class, 'index'])->name('index');
 Route::get('/show/{id}', [ProductController::class, 'show'])->name('show');
 Route::get('/categories', [CategoryController::class, 'index'])->name('categories');
+Route::get('/cart', [CartController::class, 'index'])->name('cart');

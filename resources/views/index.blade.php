@@ -1,8 +1,9 @@
 
 @extends('layouts.layout')
 
-@section('content')
+@section('title', 'Каталог товаров')
 
+@section('content')
 <div class="wrapper">
         <h2 class="text-center">Каталог</h2>
         <div class="row product_card_head d-flex justify-content-between">

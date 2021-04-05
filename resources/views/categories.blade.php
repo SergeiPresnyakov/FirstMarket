@@ -1,5 +1,7 @@
 @extends('layouts.layout')
 
+@section('title', 'Категории')
+
 @section('content')
 
 <div class="row wrapper">

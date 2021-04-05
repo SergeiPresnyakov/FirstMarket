@@ -1,7 +1,8 @@
 @extends('layouts.layout')
 
-@section('content')
+@section('title', 'Детали товара')
 
+@section('content')
 <div class="wrapper row">
     <div class="product__detail" style="background-image: url('{{$product->image}}')"></div>
     <div>
@@ -11,7 +12,4 @@
     <p>{{ $product->description }}</p>
     <a href="#" class="btn btn-primary">В корзину</a>
 </div>
-
-
-
 @endsection
